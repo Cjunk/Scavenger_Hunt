@@ -1,0 +1,7 @@
+/*
+    Use this one stop css import file to import all css
+*/
+@import "index.css";
+@import "modal.css";
+@import "scavengerlist.css";
+@import "header.css";

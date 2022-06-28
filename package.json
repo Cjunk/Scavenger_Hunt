@@ -1,0 +1,36 @@
+{
+  "name": "scavenger_hunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "bin": {
+    "2-saturday": "bin/app.js"
+  },
+  "scripts": {
+    "INIT_DATABASE_AND_START": "service postgresql start && psql scavenger_hunt < 'server/db/schema.sql' && npx nodemon server/app.js",
+    "INIT_DATABASE_ONLY": "psql scavenger_hunt < 'server/db/schema.sql'",
+    "START_SERVER_START_APPLICATION": "service postgresql start && npx nodemon server/app.js",
+    "npx monitor": "npx nodemon server/app.js",
+    "stop postgresql": "service postgresql stop",
+    "start postgresql": "service postgresql start",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "author": "Jericho Sharman",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-pg-simple": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "pg": "^8.7.3",
+    "postgres": "^3.2.4"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.6",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "nodemon": "^2.0.16"
+  }
+}

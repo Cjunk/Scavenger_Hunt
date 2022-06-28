@@ -1,0 +1,76 @@
+:root {
+  --eachDisplayedDetailBox: blue;
+  --eachDisplayedDetailboxShadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --eachDisplayedDetailBox-Hover: linear-gradient(to left, blue, black);
+  --box-Background: linear-gradient(to right, blue, black);
+  --box-text-font-size: 22px;
+  --box-text-font-color: white;
+}
+.scavengerWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80%;
+  margin: 5% 10%;
+}
+
+#scavengerWrapperList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 0;
+}
+.scavengerclass {
+  width: 80%;
+  height: 100%;
+  font-size: var(--box-text-font-size);
+  opacity: 0.5;
+  transition-property: height, opacity;
+  transition-duration: 1s;
+  margin: 0 2%;
+  padding: 5px;
+  border-radius: 15px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.scavengerclass:hover {
+  cursor: pointer;
+  height: 20%;
+  opacity: 1;
+}
+.eachDisplayedDetailBox {
+  display: grid;
+  color: var(--box-text-font-color);
+  grid-template-columns: 1fr 5fr 1fr;
+  height: 2fr;
+  margin: 5px 5px;
+  border: 2px solid var(--eachDisplayedDetailBox);
+  box-shadow: var(--eachDisplayedDetailboxShadow);
+  border-radius: 15px;
+  background: var(--box-Background);
+}
+.eachDisplayedDetailBoxRules {
+  color: var(--box-text-font-color);
+  height: 2fr;
+  margin: 5px 5px;
+  border: 2px solid var(--eachDisplayedDetailBox);
+  box-shadow: var(--eachDisplayedDetailboxShadow);
+  border-radius: 15px;
+  background: var(--box-Background);
+}
+.eachDisplayedDetailBox:hover {
+  background: var(--eachDisplayedDetailBox-Hover);
+}
+.eachDisplayedDetailBoxRules:hover {
+  background: var(--eachDisplayedDetailBox-Hover);
+}
+.scavengerListButton {
+  border-radius: 15px;
+  height: 50%;
+  align-self: center;
+  margin: 0 2%;
+}
+.scavengerListButton:hover {
+  cursor: pointer;
+}
